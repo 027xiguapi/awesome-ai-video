@@ -1,0 +1,159 @@
+baseURL = "https://aitubestats.com/"
+title = "AI 视频知识库"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+theme = "LoveIt"
+
+# 启用 emoji 支持
+enableEmoji = true
+# 启用 Git 信息
+enableGitInfo = false
+# 启用 robots.txt
+enableRobotsTXT = true
+
+[params]
+  version = "0.2.X"
+  description = "AI 视频内容拆分与记录知识库"
+  keywords = ["AI", "视频", "知识库", "人工智能"]
+  defaultTheme = "auto"
+
+  # 网站图片
+  [params.app]
+    title = "AI 视频知识库"
+    noFavicon = false
+    svgFavicon = ""
+    themeColor = "#ffffff"
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+
+  # 搜索配置
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "搜索视频或频道..."
+    maxResultLength = 10
+    snippetLength = 50
+
+  # 页面头部配置
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "AI 视频知识库"
+      pre = ""
+      post = ""
+      typeit = false
+
+  # 页脚配置
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = false
+    copyright = true
+    author = true
+    since = 2026
+
+  # 主页配置
+  [params.home]
+    [params.home.profile]
+      enable = true
+      avatarURL = ""
+      title = "AI 视频知识库"
+      subtitle = "记录和拆分不同 AI 频道的视频内容"
+      typeit = true
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 10
+
+  # 文章页面配置
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = true
+    ruby = true
+    fraction = true
+    fontawesome = true
+    linkToMarkdown = true
+    rssFullText = false
+
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+
+    [params.page.share]
+      enable = true
+      Twitter = false
+      Facebook = false
+      Linkedin = false
+      Whatsapp = false
+      Pinterest = false
+      Reddit = false
+      HackerNews = false
+      Weibo = true
+      Myspace = false
+      Blogger = false
+      Tumblr = false
+      Evernote = false
+
+    [params.page.comment]
+      enable = false
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "视频列表"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    name = "频道分类"
+    url = "/categories/"
+    weight = 3
+
+# 分类配置
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# Markdown 渲染配置
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
