@@ -1,0 +1,15 @@
+# Hugo 生成的静态文件
+/public/
+
+# 主题目录（如果你用 submodule 会用到）
+/themes/
+
+# 系统文件
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# 临时文件
+hugo_stats.json
+hugo.pid
