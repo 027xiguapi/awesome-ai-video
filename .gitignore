@@ -2,7 +2,7 @@
 /public/
 
 # 主题目录（如果你用 submodule 会用到）
-/themes/
+# /themes/
 
 # 系统文件
 .DS_Store
