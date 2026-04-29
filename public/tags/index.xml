@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AI 视频知识库</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:1313/awesome-ai-video/tags/</link>
     <description>Recent content in Tags on AI 视频知识库</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 28 Apr 2026 15:36:39 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/awesome-ai-video/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SEO</title>
-      <link>http://localhost:1313/tags/seo/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/seo/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/seo/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/seo/</guid>
       <description></description>
     </item>
     <item>
       <title>内容规划</title>
-      <link>http://localhost:1313/tags/%E5%86%85%E5%AE%B9%E8%A7%84%E5%88%92/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E5%86%85%E5%AE%B9%E8%A7%84%E5%88%92/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E5%86%85%E5%AE%B9%E8%A7%84%E5%88%92/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E5%86%85%E5%AE%B9%E8%A7%84%E5%88%92/</guid>
       <description></description>
     </item>
     <item>
       <title>频道优化</title>
-      <link>http://localhost:1313/tags/%E9%A2%91%E9%81%93%E4%BC%98%E5%8C%96/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E9%A2%91%E9%81%93%E4%BC%98%E5%8C%96/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%A2%91%E9%81%93%E4%BC%98%E5%8C%96/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E9%A2%91%E9%81%93%E4%BC%98%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
       <title>社区互动</title>
-      <link>http://localhost:1313/tags/%E7%A4%BE%E5%8C%BA%E4%BA%92%E5%8A%A8/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E7%A4%BE%E5%8C%BA%E4%BA%92%E5%8A%A8/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E7%A4%BE%E5%8C%BA%E4%BA%92%E5%8A%A8/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E7%A4%BE%E5%8C%BA%E4%BA%92%E5%8A%A8/</guid>
       <description></description>
     </item>
     <item>
       <title>视频插帧</title>
-      <link>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E6%8F%92%E5%B8%A7/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E6%8F%92%E5%B8%A7/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E6%8F%92%E5%B8%A7/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E6%8F%92%E5%B8%A7/</guid>
       <description></description>
     </item>
     <item>
       <title>视频超分</title>
-      <link>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E8%B6%85%E5%88%86/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E8%B6%85%E5%88%86/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E8%B6%85%E5%88%86/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E8%B6%85%E5%88%86/</guid>
       <description></description>
     </item>
     <item>
       <title>视频理解</title>
-      <link>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3/</guid>
       <description></description>
     </item>
     <item>
       <title>数据分析</title>
-      <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</guid>
       <description></description>
     </item>
     <item>
       <title>图生视频</title>
-      <link>http://localhost:1313/tags/%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91/</guid>
       <description></description>
     </item>
     <item>
       <title>文生视频</title>
-      <link>http://localhost:1313/tags/%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91/</link>
+      <link>http://localhost:1313/awesome-ai-video/tags/%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91/</link>
       <pubDate>Tue, 28 Apr 2026 15:36:39 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91/</guid>
+      <guid>http://localhost:1313/awesome-ai-video/tags/%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91/</guid>
       <description></description>
     </item>
   </channel>
