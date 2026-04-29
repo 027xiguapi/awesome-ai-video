@@ -1,0 +1,72 @@
+{
+  "name": "AI视频知识图谱处理系统",
+  "version": "1.0.0",
+  "description": "用于系统化处理AI视频和YouTube运维知识的Claude Skills集合",
+  "author": "西瓜皮",
+  "project_root": ".",
+  "skills": [
+    {
+      "id": "parse-wx-articles",
+      "name": "解析微信文章",
+      "description": "解析微信导出的文章文件，提取标题、链接、内容等结构化数据",
+      "command": "parse-wx",
+      "category": "数据处理"
+    },
+    {
+      "id": "classify-article",
+      "name": "分类文章",
+      "description": "对单篇文章进行智能分类，判断属于AI视频还是YouTube运维领域",
+      "command": "classify-article",
+      "category": "内容处理"
+    },
+    {
+      "id": "extract-summary",
+      "name": "提取摘要",
+      "description": "从文章中提取关键摘要，保留核心信息",
+      "command": "extract-summary",
+      "category": "内容处理"
+    },
+    {
+      "id": "generate-tags",
+      "name": "生成标签",
+      "description": "根据文章内容自动生成相关标签",
+      "command": "generate-tags",
+      "category": "内容处理"
+    },
+    {
+      "id": "build-knowledge-graph",
+      "name": "构建知识图谱",
+      "description": "从文章数据构建知识图谱，提取关键概念、建立关系、生成可视化数据",
+      "command": "build-knowledge-graph",
+      "category": "知识管理"
+    },
+    {
+      "id": "full-pipeline",
+      "name": "完整处理流程",
+      "description": "一键执行完整的处理流程：解析 → 处理 → 分类 → 图谱构建",
+      "command": "full-pipeline",
+      "category": "工作流"
+    },
+    {
+      "id": "view-config",
+      "name": "查看配置",
+      "description": "查看项目配置，包括分类体系、标签体系、API参数等",
+      "command": "view-config",
+      "category": "配置管理"
+    },
+    {
+      "id": "update-config",
+      "name": "更新配置",
+      "description": "更新项目配置，如添加新分类、标签等",
+      "command": "update-config",
+      "category": "配置管理"
+    },
+    {
+      "id": "stats",
+      "name": "查看统计",
+      "description": "查看项目统计信息：文章数、分类分布、标签云等",
+      "command": "stats",
+      "category": "分析"
+    }
+  ]
+}

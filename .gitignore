@@ -13,3 +13,5 @@
 # 临时文件
 hugo_stats.json
 hugo.pid
+
+wx/

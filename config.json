@@ -1,0 +1,71 @@
+{
+  "project": {
+    "name": "AI视频知识图谱",
+    "description": "系统化解析AI视频和YouTube频道运维知识"
+  },
+  "processing": {
+    "parse": {
+      "input_dir": "wx",
+      "output_dir": "data/parsed",
+      "formats": ["txt", "json"]
+    },
+    "process": {
+      "input_dir": "data/parsed",
+      "output_dir": "content/posts",
+      "use_claude": true,
+      "claude_model": "claude-opus-4-6"
+    },
+    "graph": {
+      "input_file": "data/parsed/parsed_articles.json",
+      "output_file": "data/knowledge_graph.json"
+    }
+  },
+  "categories": {
+    "ai_video": {
+      "name": "AI视频",
+      "subcategories": [
+        "视频生成",
+        "视频编辑",
+        "视频理解",
+        "实时视频处理"
+      ]
+    },
+    "youtube_ops": {
+      "name": "YouTube频道运维",
+      "subcategories": [
+        "频道管理",
+        "内容策略",
+        "SEO优化",
+        "社区运营"
+      ]
+    }
+  },
+  "tags": {
+    "ai_video": [
+      "文生视频",
+      "图生视频",
+      "视频超分",
+      "视频插帧",
+      "视频理解",
+      "实时处理"
+    ],
+    "youtube_ops": [
+      "频道优化",
+      "内容规划",
+      "SEO",
+      "社区互动",
+      "数据分析"
+    ]
+  },
+  "claude_api": {
+    "enabled": true,
+    "model": "claude-opus-4-6",
+    "temperature": 0.7,
+    "max_tokens": 2000
+  },
+  "hugo": {
+    "content_dir": "content",
+    "output_dir": "public",
+    "theme": "LoveIt"
+  }
+}

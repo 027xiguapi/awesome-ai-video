@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lh *.md config.json)",
+      "Read(//tmp/**)",
+      "Bash(cp D:/monorepo/awesome-ai-video/skills/skills.json D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/skills/skills_manager.py D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/skills/skills.schema.json D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/CLAUDE_SKILLS_GUIDE.md D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/SKILLS_QUICK_REFERENCE.md D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/SKILLS_ARCHITECTURE.md D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/DOCUMENTATION_INDEX.md D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(cp D:/monorepo/awesome-ai-video/CLAUDE_SKILLS_SUMMARY.md D:/monorepo/awesome-ai-video/.claude/skills/)",
+      "Bash(python .claude/skills/skills_manager.py convert-wx --start 0 --limit 3)",
+      "Bash(python .claude/skills/skills_manager.py convert-wx)"
+    ]
+  }
+}

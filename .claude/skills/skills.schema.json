@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claude Skills - AI视频知识图谱",
+  "description": "用于系统化处理AI视频和YouTube运维知识的Claude Skills集合",
+  "type": "object",
+  "properties": {
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Skill唯一标识"
+          },
+          "name": {
+            "type": "string",
+            "description": "Skill名称"
+          },
+          "description": {
+            "type": "string",
+            "description": "Skill功能描述"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["数据处理", "内容处理", "知识管理", "工作流", "配置管理", "分析"],
+            "description": "Skill分类"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Skill图标"
+          },
+          "usage": {
+            "type": "string",
+            "description": "使用方式"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "使用示例"
+          },
+          "parameters": {
+            "type": "object",
+            "description": "参数定义",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["string", "number", "boolean", "array", "object"]
+                },
+                "description": {
+                  "type": "string"
+                },
+                "required": {
+                  "type": "boolean"
+                },
+                "default": {
+                  "type": ["string", "number", "boolean"]
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "output": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["string", "json", "markdown", "object", "array"]
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": ["id", "name", "description", "usage"]
+      }
+    }
+  }
+}

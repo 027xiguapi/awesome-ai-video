@@ -1,0 +1,321 @@
+{
+  "skills": [
+    {
+      "id": "parse-wx-articles",
+      "name": "解析微信文章",
+      "description": "解析微信导出的文章文件，提取标题、链接、内容等结构化数据",
+      "category": "数据处理",
+      "icon": "📄",
+      "usage": "/parse-wx <file_path>",
+      "examples": [
+        "/parse-wx wx/articles.txt",
+        "/parse-wx wx/2024_articles.txt"
+      ],
+      "parameters": {
+        "file_path": {
+          "type": "string",
+          "description": "微信导出文件路径",
+          "required": true
+        }
+      },
+      "output": {
+        "type": "json",
+        "description": "解析后的文章数据，包含标题、链接、日期、内容等"
+      }
+    },
+    {
+      "id": "process-articles",
+      "name": "处理文章",
+      "description": "使用Claude智能处理文章：提取摘要、生成标签、分类、生成Hugo Markdown",
+      "category": "内容处理",
+      "icon": "✨",
+      "usage": "/process-articles <json_file> [--category <category>]",
+      "examples": [
+        "/process-articles data/parsed/articles.json",
+        "/process-articles data/parsed/articles.json --category ai_video",
+        "/process-articles data/parsed/articles.json --category youtube_ops"
+      ],
+      "parameters": {
+        "json_file": {
+          "type": "string",
+          "description": "解析后的JSON文件路径",
+          "required": true
+        },
+        "category": {
+          "type": "string",
+          "description": "指定分类（ai_video 或 youtube_ops）",
+          "required": false,
+          "options": ["ai_video", "youtube_ops"]
+        }
+      },
+      "output": {
+        "type": "markdown",
+        "description": "生成的Hugo Markdown文件和处理统计"
+      }
+    },
+    {
+      "id": "build-knowledge-graph",
+      "name": "构建知识图谱",
+      "description": "从文章数据构建知识图谱，提取关键概念、建立关系、生成可视化数据",
+      "category": "知识管理",
+      "icon": "🕸️",
+      "usage": "/build-knowledge-graph <json_file> [--format <format>]",
+      "examples": [
+        "/build-knowledge-graph data/parsed/articles.json",
+        "/build-knowledge-graph data/parsed/articles.json --format d3",
+        "/build-knowledge-graph data/parsed/articles.json --format cytoscape"
+      ],
+      "parameters": {
+        "json_file": {
+          "type": "string",
+          "description": "处理后的文章JSON文件",
+          "required": true
+        },
+        "format": {
+          "type": "string",
+          "description": "可视化格式",
+          "required": false,
+          "options": ["d3", "cytoscape", "json"]
+        }
+      },
+      "output": {
+        "type": "json",
+        "description": "知识图谱数据，包含节点、边、概念关系"
+      }
+    },
+    {
+      "id": "classify-article",
+      "name": "分类文章",
+      "description": "对单篇文章进行智能分类，判断属于AI视频还是YouTube运维领域",
+      "category": "内容处理",
+      "icon": "🏷️",
+      "usage": "/classify-article <title> <content>",
+      "examples": [
+        "/classify-article 'Sora视频生成最新进展' '本文介绍了Sora在视频生成中的应用...'",
+        "/classify-article 'YouTube频道增长策略' '如何通过SEO优化提升频道曝光...'"
+      ],
+      "parameters": {
+        "title": {
+          "type": "string",
+          "description": "文章标题",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "description": "文章内容摘要或全文",
+          "required": true
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "分类结果，包含主分类、子分类、置信度、推荐标签"
+      }
+    },
+    {
+      "id": "extract-summary",
+      "name": "提取摘要",
+      "description": "从文章中提取关键摘要，保留核心信息",
+      "category": "内容处理",
+      "icon": "📝",
+      "usage": "/extract-summary <content> [--length <length>]",
+      "examples": [
+        "/extract-summary '长文章内容...'",
+        "/extract-summary '长文章内容...' --length short",
+        "/extract-summary '长文章内容...' --length medium"
+      ],
+      "parameters": {
+        "content": {
+          "type": "string",
+          "description": "文章内容",
+          "required": true
+        },
+        "length": {
+          "type": "string",
+          "description": "摘要长度",
+          "required": false,
+          "options": ["short", "medium", "long"]
+        }
+      },
+      "output": {
+        "type": "string",
+        "description": "提取的摘要文本"
+      }
+    },
+    {
+      "id": "generate-tags",
+      "name": "生成标签",
+      "description": "根据文章内容自动生成相关标签",
+      "category": "内容处理",
+      "icon": "🏷️",
+      "usage": "/generate-tags <content> [--count <count>]",
+      "examples": [
+        "/generate-tags '文章内容...'",
+        "/generate-tags '文章内容...' --count 5",
+        "/generate-tags '文章内容...' --count 10"
+      ],
+      "parameters": {
+        "content": {
+          "type": "string",
+          "description": "文章内容",
+          "required": true
+        },
+        "count": {
+          "type": "number",
+          "description": "生成的标签数量",
+          "required": false,
+          "default": 5
+        }
+      },
+      "output": {
+        "type": "array",
+        "description": "生成的标签列表"
+      }
+    },
+    {
+      "id": "full-pipeline",
+      "name": "完整处理流程",
+      "description": "一键执行完整的处理流程：解析 → 处理 → 分类 → 图谱构建",
+      "category": "工作流",
+      "icon": "🚀",
+      "usage": "/full-pipeline <wx_file>",
+      "examples": [
+        "/full-pipeline wx/articles.txt",
+        "/full-pipeline wx/2024_articles.txt"
+      ],
+      "parameters": {
+        "wx_file": {
+          "type": "string",
+          "description": "微信导出文件路径",
+          "required": true
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "完整处理结果，包含解析数、处理数、分类统计、图谱数据"
+      }
+    },
+    {
+      "id": "view-config",
+      "name": "查看配置",
+      "description": "查看项目配置，包括分类体系、标签体系、API参数等",
+      "category": "配置管理",
+      "icon": "⚙️",
+      "usage": "/view-config [--section <section>]",
+      "examples": [
+        "/view-config",
+        "/view-config --section categories",
+        "/view-config --section tags",
+        "/view-config --section claude_api"
+      ],
+      "parameters": {
+        "section": {
+          "type": "string",
+          "description": "配置部分",
+          "required": false,
+          "options": ["categories", "tags", "claude_api", "processing"]
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "配置信息"
+      }
+    },
+    {
+      "id": "update-config",
+      "name": "更新配置",
+      "description": "更新项目配置，如添加新分类、标签等",
+      "category": "配置管理",
+      "icon": "✏️",
+      "usage": "/update-config <section> <key> <value>",
+      "examples": [
+        "/update-config categories new_category '新分类名称'",
+        "/update-config tags ai_video '新标签'",
+        "/update-config claude_api temperature 0.8"
+      ],
+      "parameters": {
+        "section": {
+          "type": "string",
+          "description": "配置部分",
+          "required": true
+        },
+        "key": {
+          "type": "string",
+          "description": "配置键",
+          "required": true
+        },
+        "value": {
+          "type": "string",
+          "description": "配置值",
+          "required": true
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "更新后的配置"
+      }
+    },
+    {
+      "id": "stats",
+      "name": "查看统计",
+      "description": "查看项目统计信息：文章数、分类分布、标签云等",
+      "category": "分析",
+      "icon": "📊",
+      "usage": "/stats [--type <type>]",
+      "examples": [
+        "/stats",
+        "/stats --type categories",
+        "/stats --type tags",
+        "/stats --type timeline"
+      ],
+      "parameters": {
+        "type": {
+          "type": "string",
+          "description": "统计类型",
+          "required": false,
+          "options": ["categories", "tags", "timeline", "all"]
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "统计数据和可视化"
+      }
+    },
+    {
+      "id": "convert-wx-articles",
+      "name": "转换微信文章",
+      "description": "将wx文件夹中的文章转换为Hugo Markdown格式，使用Claude优化内容，保存到content/posts",
+      "category": "内容处理",
+      "icon": "🔄",
+      "usage": "/convert-wx-articles [--start <index>] [--limit <count>] [--optimize]",
+      "examples": [
+        "/convert-wx-articles",
+        "/convert-wx-articles --start 0 --limit 5",
+        "/convert-wx-articles --optimize",
+        "/convert-wx-articles --start 10 --limit 20 --optimize"
+      ],
+      "parameters": {
+        "start": {
+          "type": "number",
+          "description": "开始索引（默认0）",
+          "required": false,
+          "default": 0
+        },
+        "limit": {
+          "type": "number",
+          "description": "处理数量限制（默认全部）",
+          "required": false
+        },
+        "optimize": {
+          "type": "boolean",
+          "description": "是否使用Claude优化内容",
+          "required": false,
+          "default": true
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "转换结果，包含成功数、失败数、生成的文件列表"
+      }
+    }
+  ]
+}
