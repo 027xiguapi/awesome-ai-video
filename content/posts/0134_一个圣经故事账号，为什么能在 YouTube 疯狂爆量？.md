@@ -9,16 +9,6 @@ description: "来自微信的优化文章"
 
 # 一个圣经故事账号，为什么能在 YouTube 疯狂爆量？
 
-原创 喜仔Plus 喜仔Plus 喜仔AI出海
-
-_2026年2月6日 13:12_ _广东_
-
-在小说阅读器读本章
-
-去阅读
-
-在小说阅读器中沉浸阅读
-
 ![图片](/images/一个圣经故事账号，为什么能在 YouTube 疯狂爆量？/0.png)
 
 最近在拆 YouTube 的时候，注意到一个账号： **[BibleStories.official](http://BibleStories.official)** 。
