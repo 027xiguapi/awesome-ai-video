@@ -12,7 +12,9 @@
       "Bash(cp D:/monorepo/awesome-ai-video/DOCUMENTATION_INDEX.md D:/monorepo/awesome-ai-video/.claude/skills/)",
       "Bash(cp D:/monorepo/awesome-ai-video/CLAUDE_SKILLS_SUMMARY.md D:/monorepo/awesome-ai-video/.claude/skills/)",
       "Bash(python .claude/skills/skills_manager.py convert-wx --start 0 --limit 3)",
-      "Bash(python .claude/skills/skills_manager.py convert-wx)"
+      "Bash(python .claude/skills/skills_manager.py convert-wx)",
+      "Bash(python *)",
+      "Bash(hugo --quiet)"
     ]
   }
 }

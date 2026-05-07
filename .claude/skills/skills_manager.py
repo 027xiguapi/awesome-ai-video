@@ -129,15 +129,18 @@ description: "来自微信的优化文章"
         print(f"  💡 提示: 可以集成Claude API来优化内容")
         return content
 
-    def _copy_images_to_static(self, article_title: str, images_dir: str) -> str:
-        """复制图片文件夹到static/images目录"""
+    def _copy_images_to_static(self, article_title: str, images_dir: str, idx: int = None) -> str:
+        """复制图片文件夹到static/images目录（使用idx序号）"""
         images_path = Path(images_dir)
         if not images_path.exists():
             return None
 
-        # 创建目标图片目录
-        safe_title = re.sub(r'[<>:"/\\|?*]', '', article_title)[:50]
-        target_images_dir = self.static_dir / f"images/{safe_title}"
+        # 创建目标图片目录（优先使用idx序号）
+        if idx is not None:
+            dir_name = f"{idx:04d}"
+        else:
+            dir_name = re.sub(r'[<>:"/\\|?*]', '', article_title)[:50]
+        target_images_dir = self.static_dir / f"images/{dir_name}"
 
         try:
             if target_images_dir.exists():
@@ -149,8 +152,8 @@ description: "来自微信的优化文章"
                 if image_file.is_file():
                     shutil.copy2(image_file, target_images_dir / image_file.name)
 
-            print(f"    ✓ 图片已复制到: static/images/{safe_title}/")
-            return f"/images/{safe_title}"
+            print(f"    ✓ 图片已复制到: static/images/{dir_name}/")
+            return f"/images/{dir_name}"
         except Exception as e:
             print(f"    ⚠️  图片复制失败: {str(e)}")
             return None
@@ -205,7 +208,7 @@ description: "来自微信的优化文章"
                 image_path_prefix = None
                 if images_dir and Path(images_dir).exists():
                     print(f"  📸 复制图片到static...")
-                    image_path_prefix = self._copy_images_to_static(article["title"], images_dir)
+                    image_path_prefix = self._copy_images_to_static(article["title"], images_dir, idx)
 
                 # 优化内容（可选）
                 if optimize:
