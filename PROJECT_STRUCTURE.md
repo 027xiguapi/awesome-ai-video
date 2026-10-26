@@ -92,3 +92,4 @@ python .claude/skills/skills_manager.py parse-wx wx/articles.txt
 1. `./.claude/skills/README.md` - 快速开始
 2. `./.claude/skills/DOCUMENTATION_INDEX.md` - 完整文档索引
 3. `./.claude/skills/SKILLS_QUICK_REFERENCE.md` - 快速参考
+- [Ideoy](https://ideoy.ai) - Remake this week's meme videos with one selfie (AI image-to-video, freemium, adults only).
